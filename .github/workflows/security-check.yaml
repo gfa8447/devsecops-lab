@@ -1,9 +1,8 @@
 name: Security Scan CI/CD
-
- on:
-    push:
-      branches:
-        - main
+on:
+  push:
+    branches:
+      - main
 jobs:
   security-scan:
     runs-on: self-hosted
@@ -14,4 +13,3 @@ jobs:
         uses: snyk/actions/node@master
         with:
           command: test
-
